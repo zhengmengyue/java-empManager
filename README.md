@@ -1,5 +1,5 @@
 # java-empManager
-员工管理系统，Java Web练手项目，实现员工信息增删改查功能。
+基于Java web MVC架构的员工信息管理系统，JavaWeb练手项目，实现员工信息增删改查功能。
 
 ## 技术栈
 - 后端：Java Servlet
