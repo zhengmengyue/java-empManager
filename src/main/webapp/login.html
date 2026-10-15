@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>员工信息管理系统 · 登录</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4ff;
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  }
+  .bg-decor {
+    position: fixed; inset: 0; overflow: hidden; z-index: 0;
+  }
+  .bg-decor span {
+    position: absolute; border-radius: 50%;
+    background: radial-gradient(circle, rgba(99,102,241,0.12), transparent 70%);
+  }
+  .bg-decor span:nth-child(1) { width: 600px; height: 600px; top: -200px; left: -100px; }
+  .bg-decor span:nth-child(2) { width: 500px; height: 500px; bottom: -150px; right: -100px; background: radial-gradient(circle, rgba(16,185,129,0.08), transparent 70%); }
+  .card {
+    position: relative; z-index: 1;
+    width: 420px;
+    background: #ffffff;
+    border: 1px solid #e8eaf0;
+    border-radius: 20px;
+    padding: 48px 40px;
+    box-shadow: 0 8px 40px rgba(99,102,241,0.12);
+  }
+  .logo {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .logo-icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border-radius: 16px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 26px; margin-bottom: 16px;
+    box-shadow: 0 8px 24px rgba(99,102,241,0.4);
+  }
+  .logo h1 { font-size: 22px; color: #1e293b; font-weight: 600; letter-spacing: 1px; }
+  .logo p  { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 13px; color: #64748b; margin-bottom: 8px; letter-spacing: 0.5px; }
+  .form-group input {
+    width: 100%; height: 46px; padding: 0 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px; color: #1e293b; font-size: 15px;
+    outline: none; transition: border-color .2s, box-shadow .2s;
+  }
+  .form-group input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+  }
+  .btn-submit {
+    width: 100%; height: 48px; margin-top: 8px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none; border-radius: 10px;
+    color: #fff; font-size: 16px; font-weight: 600;
+    cursor: pointer; letter-spacing: 1px;
+    transition: opacity .2s, transform .1s;
+    box-shadow: 0 6px 20px rgba(99,102,241,0.4);
+  }
+  .btn-submit:hover  { opacity: .9; }
+  .btn-submit:active { transform: scale(.98); }
+</style>
+</head>
+<body>
+<div class="bg-decor"><span></span><span></span></div>
+<div class="card">
+  <div class="logo">
+    <div class="logo-icon">👥</div>
+    <h1>员工信息管理系统</h1>
+    <p>Employee Management System</p>
+  </div>
+  <form action="LoginServlet" method="post">
+    <div class="form-group">
+      <label>用户名</label>
+      <input type="text" name="username" placeholder="请输入用户名" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label>密码</label>
+      <input type="password" name="password" placeholder="请输入密码">
+    </div>
+    <button type="submit" class="btn-submit">登 录</button>
+  </form>
+</div>
+</body>
+</html>
